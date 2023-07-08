@@ -1,0 +1,245 @@
+body {
+  background-color: black;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+#tsparticles {
+  background: black;
+  filter: blur(6.5rem);
+  height: 140%;
+  width: 140%;
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  z-index: -2;
+}
+
+#blur {
+  background: url("/Portfolio_files/Noise.png");
+  background-repeat: repeat;
+  background-size: 200px;
+  mix-blend-mode: soft-light;
+  opacity: 0.2;
+  position: fixed;
+  height: 120%;
+  width: 120%;
+  top: -50px;
+  left: -50px;
+  z-index: -1;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: white;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: -1px;
+
+  text-transform: none;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.workBadge {
+  color: white;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  line-height: 1.2em;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.workBadge span {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 100px;
+}
+
+.current {
+  margin-top: 70px;
+}
+
+/*
+TOOLTIPS
+__________________________________
+*/
+
+.tooltiptext {
+  background-color: white;
+  color: #3d4144;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 1.2em;
+  padding: 10px 12px;
+  border-radius: 100px;
+  text-decoration: none;
+  user-select: none;
+  pointer-events: none;
+
+  /* Position the tooltip */
+  position: absolute;
+  width: 90px;
+  z-index: 0;
+  top: 100%;
+  margin-top: 12px;
+  margin-left: -72%;
+
+  /* visibility: hidden; */
+  opacity: 0;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  /* outline-offset: 4px; */
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0px 0px 0px 4px white;
+  -webkit-box-shadow: 0px 0px 0px 4px white;
+  -moz-box-shadow: 0px 0px 0px 4px white;
+  opacity: 1;
+}
+
+.button:active {
+  background-color: rgba(255, 255, 255, 0.36);
+  border-radius: 32px;
+}
+
+.button:focus .tooltiptext {
+  visibility: visible;
+  z-index: 100;
+  opacity: 1;
+}
+
+.b1:hover .tooltiptext,
+.b2:hover .tooltiptext,
+.b3:hover .tooltiptext,
+.b4:hover .tooltiptext,
+.b5:hover .tooltiptext {
+  /* visibility: visible; */
+  opacity: 1;
+  z-index: 100;
+}
+
+/*
+__________________________________
+*/
+
+h3 {
+  color: white;
+  font-family: General-Regular, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  line-height: 1.2em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.socialButtons {
+  display: flex;
+  margin: auto;
+  gap: 20px;
+}
+
+.button {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  position: relative;
+}
+
+.b1 {
+  transform: rotate(-6deg);
+  margin-top: 13px;
+}
+
+.b2 {
+  transform: rotate(-3deg);
+  margin-top: 4px;
+}
+
+.b3 {
+  transform: rotate(0deg);
+}
+
+.b4 {
+  transform: rotate(3deg);
+  margin-top: 4px;
+}
+
+.b5 {
+  transform: rotate(6deg);
+  margin-top: 13px;
+}
+
+.placeholder {
+  color: white;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 70%;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 30px;
+}
+
+.placeholder-text {
+  font-family: General-Regular, sans-serif;
+  font-size: 16px;
+}
+
+.socialButtonsMobile {
+  display: none;
+  margin: auto;
+  flex-direction: column;
+  margin: auto;
+}
+
+.top,
+.bottom {
+  display: flex;
+  margin: auto;
+  gap: 12px;
+}
+
+.bottom {
+  margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .socialButtons {
+    display: none;
+  }
+  .socialButtonsMobile {
+    display: flex;
+  }
+}
