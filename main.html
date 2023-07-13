@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página com Frames</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        #frame1 {
+            flex-grow: 1;
+            border: none;
+        }
+        
+        #frame2 {
+            height: 200px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <iframe id="frame1" src="index.html"></iframe>
+        <iframe id="frame2" src="process_survey.php"></iframe>
+    </div>
+</body>
+</html>
