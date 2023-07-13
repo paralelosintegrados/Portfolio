@@ -1,0 +1,24 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Dados do formulário
+    $breakfast = $_POST["breakfast"] ?? "";
+    $afternoon = $_POST["afternoon"] ?? "";
+    $gender = $_POST["gender"] ?? "";
+    $age = $_POST["age"] ?? "";
+    $education = $_POST["education"] ?? "";
+    $income = $_POST["income"] ?? "";
+    $notifications = $_POST["notifications"] ?? "";
+    
+    // Montar a linha com os dados
+    $line = "$breakfast,$afternoon,$gender,$age,$education,$income,$notifications";
+    
+    // Abrir o arquivo CSV em modo de escrita
+    $file = fopen("survey_results.csv", "a");
+    
+    // Escrever a linha no arquivo
+    fwrite($file, $line . "\n");
+    
+    // Fechar o arquivo
+    fclose($file);
+}
+?>
