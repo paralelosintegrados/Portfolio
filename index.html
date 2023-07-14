@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exemplo de página com frames</title>
+    <title>Redirecionamento</title>
 </head>
 <body>
-  <h1>Página com frames</h1>
-  
-  <iframe src="https://forms.gle/NM5JTpgLXdkmukZE7"></iframe>
-  
-  <iframe src="https://sites.google.com/paralelosintegrados"></iframe>
+    <p>Clique no botão abaixo para ser redirecionado para a página inicial:</p>
+    <button onclick="redirecionar()">Ir para a Página Inicial</button>
+
+    <script>
+        function redirecionar() {
+            window.location.href = "https://sites.google.com/view/paralelosintegrados/p%C3%A1gina-inicial?authuser=1";
+        }
+    </script>
 </body>
 </html>
